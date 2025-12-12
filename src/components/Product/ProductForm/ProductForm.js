@@ -11,11 +11,7 @@ const ProductForm = (props) => {
         event.preventDefault();
 
         console.log(
-          `Summary \n================\n\n Name: ${
-            props.title
-          }\n\n Price: ${props.getPrice()}\n\n Size: ${
-            props.currentSize
-          }\n\n Color: ${props.currentColor}`
+          `Summary \n================\n\n Name: ${props.title}\n\n Price: ${props.price}\n\n Size: ${props.currentSize}\n\n Color: ${props.currentColor}`
         );
       }}
     >
@@ -42,7 +38,7 @@ ProductForm.propTypes = {
   title: PropTypes.string.isRequired,
   sizes: PropTypes.array.isRequired,
   currentSize: PropTypes.string.isRequired,
-  getPrice: PropTypes.func.isRequired,
+  price: PropTypes.number.isRequired,
   setCurrentSize: PropTypes.func.isRequired,
   colors: PropTypes.array.isRequired,
   currentColor: PropTypes.string.isRequired,
